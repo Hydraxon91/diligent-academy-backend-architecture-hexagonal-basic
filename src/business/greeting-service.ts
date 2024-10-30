@@ -1,9 +1,9 @@
 
-interface ProvideNamePrimaryPort {
+export interface ProvideNamePrimaryPort {
   greet: (name: string) => string;
 }
 
-interface StoreGreetingSecondaryPort {
+export interface StoreGreetingSecondaryPort {
   save: (greeting: string) => void;
 }
 
