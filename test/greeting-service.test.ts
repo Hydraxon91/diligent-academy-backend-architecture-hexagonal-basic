@@ -31,3 +31,10 @@ it('throws error when called with undefined', () => {
 it('throws error when called with empty string', () => {
     expect(()=>  app?.greet('')).toThrow('Please provide a name');
 });
+
+it('handles long strings correctly', () => {
+    const longName = 'a'.repeat(1000);
+    const response = app?.greet(longName);
+  
+    expect(response).toBe(`Hello, ${longName}`);
+  });
