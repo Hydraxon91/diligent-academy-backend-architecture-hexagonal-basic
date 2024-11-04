@@ -40,7 +40,7 @@
 - It also pass the service to the primary adapter to use it.
 - Run your code with the `npm run ts -- src/args.ts Alice` command.
 
-## Task 6: Create test for the service
+## Task 6: Create test for the service -- We are here, do this, 7 and 8 for hw
 
 - Create some tests for the service.
 
