@@ -12,6 +12,9 @@ export class GreetingService implements ProvideNamePrimaryPort{
   constructor(private readonly store: StoreGreetingSecondaryPort){}
 
   greet(name: string) {
+    if (!name) {
+      throw new Error('Please provide a name')
+    }
     const greeting = `Hello, ${name}`;
     this.store.save(greeting);
     return greeting;
