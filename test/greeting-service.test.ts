@@ -24,3 +24,10 @@ it('FakeStoreSecondaryAdapter save() gets called', () => {
     expect(response).toStrictEqual("Hello, Michael");
 });
 
+it('throws error when called with undefined', () => {
+    expect(()=>  app?.greet(undefined as unknown as string)).toThrow('Please provide a name');
+});
+
+it('throws error when called with empty string', () => {
+    expect(()=>  app?.greet('')).toThrow('Please provide a name');
+});
