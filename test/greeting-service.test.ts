@@ -38,3 +38,10 @@ it('handles long strings correctly', () => {
   
     expect(response).toBe(`Hello, ${longName}`);
   });
+
+it('handles special characters in the name', () => {
+    const specialName = '!%/+!%';
+    const response = app?.greet(specialName);
+  
+    expect(response).toBe(`Hello, ${specialName}`);
+  });
