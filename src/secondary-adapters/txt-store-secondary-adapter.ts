@@ -1,7 +1,7 @@
 import { existsSync, writeFileSync, appendFileSync } from "fs";
-import { StoreGreetingInTxtSecondaryPort } from "../business/greeting-service";
+import { StoreGreetingSecondaryPort } from "../business/greeting-service";
 
-export class TxtStoreSecondaryAdapter implements StoreGreetingInTxtSecondaryPort{
+export class TxtStoreSecondaryAdapter implements StoreGreetingSecondaryPort{
 
     save(message: string){
         if (!message) {
